@@ -1,6 +1,6 @@
 import React from "react";
-import Single_product_card from "../components/single_product_card";
-import Router from "next/router";
+// import Single_product_card from "../components/single_product_card";
+import { useRouter } from "next/router";
 import { useDispatch, useSelector } from "react-redux";
 import { buyProduct } from "../configureStore/storeSlice";
 import Image from "next/image";
@@ -10,11 +10,10 @@ import styles from "../styles/singlePro.module.css";
 function VeiwProduct() {
   const dispatch = useDispatch();
   const { cartItems, products } = useSelector((state) => state.root);
-  const router = Router.useRouter();
+  const router = useRouter();
   const id = router.asPath.split("/?id=")[1];
-  // console.log("router data**", id);
   const this_product = products.filter(
-    (product) => product.id === parseInt(id, 10)
+    async (product) => product.id === parseInt(id, 10)
   )[0];
   if (!this_product) {
     router.push("/");
@@ -29,14 +28,14 @@ function VeiwProduct() {
           <Image
             //   src={"/laptop.jpg"}
             alt={this_product.name || "product"}
-            src={`/${this_product.image}`}
+            src={`/${this_product.image || "laptop-s.jpg"}`}
             width="350px"
             height="270px"
             className={styles._Image}
           />
         </div>
         <div className={styles.product_discription}>
-          <h3>price: {this_product.price}</h3>
+          <h3>price: {this_product.price || "10000"}</h3>
           <h4>discription</h4>
           <p>{this_product.description}</p>
         </div>
