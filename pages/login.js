@@ -62,7 +62,7 @@ function UserSignUp() {
           </form>
         </div>
         <h3>
-          didn't have account ?
+          {"didn't have account ?"}
           <span className={styles.sign_btn} onClick={showRegisterPage}>
             create here
           </span>

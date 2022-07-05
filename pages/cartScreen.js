@@ -47,6 +47,7 @@ function CartScreen() {
                     <span className={styles.productName}>
                       {product.name}
                       <Image
+                        alt={`${product.name}`}
                         src={`/${product.image}`}
                         width="100px"
                         height="70px"

@@ -17,9 +17,10 @@ function Single_product_card({ this_product }) {
   return (
     <div className={styles.product_container}>
       <div className={styles.product_Image}>
-        <h2>{this_product.name || "laptop"}</h2>
+        <h2>{this_product.name || "product"}</h2>
         <Image
           //   src={"/laptop.jpg"}
+          alt={this_product.name || "product"}
           src={`/${this_product.image}`}
           width="350px"
           height="270px"
@@ -29,13 +30,7 @@ function Single_product_card({ this_product }) {
       <div className={styles.product_discription}>
         <h3>price: {this_product.price}</h3>
         <h4>discription</h4>
-        <p>
-          {/* this is laptop Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. Repellendus odit consectetur repudiandae, illo, ipsam at
-          corporis doloribus rem porro accusantium dignissimos officia.
-          Inventore, commodi? */}
-          {this_product.description}
-        </p>
+        <p>{this_product.description}</p>
       </div>
       <div className={styles.Bottom_btn_box}>
         <span className={styles.Bottom_btn1}>
