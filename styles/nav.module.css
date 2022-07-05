@@ -1,0 +1,205 @@
+.navBar {
+    width: 100vw;
+    height: 4rem;
+    margin-bottom: 3rem;
+    background-color: rgb(49, 17, 67);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3rem;
+}
+
+.navBar_logo {
+    font-size: 3rem;
+    font-family: 'Pacifico', cursive;
+    color: lightgray;
+}
+
+.navSearchBar {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    border-radius: 2rem;
+    overflow: hidden;
+    /* padding: 5px; */
+}
+
+.navSearchBar input {
+    width: fit-content;
+    height: 2.5rem;
+    padding-left: 1rem;
+    border: none;
+    outline: none;
+}
+
+.navSearchBar label {
+    position: absolute;
+    right: 7px;
+    top: 5px;
+}
+
+.navSearchBar label img {
+    width: 30px;
+}
+
+.navBar_sideBtn {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.login_btn {
+    width: fit-content;
+    height: fit-content;
+    padding: 0.5rem 1.2rem;
+    background-color: rgb(255, 173, 41);
+    /* box-shadow: 0px 2px 10px gray; */
+    border-radius: 10px;
+    font-weight: 600;
+    color: black;
+}
+
+.login_btn:hover {
+    background-color: rgb(211, 131, 2);
+    cursor: pointer;
+}
+
+.navBar_sideBtn .cartImage {
+    width: 30px;
+    filter: invert();
+}
+
+.navBar_sideBtn .cartImage:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+.cartItems_box {
+    position: relative;
+}
+
+.cartItems {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    top: -10px;
+    right: -10px;
+    font-size: 0.8rem;
+    position: absolute;
+    z-index: 10;
+    font-weight: 700;
+    background-color: aliceblue;
+    width: 20px;
+    height: 20px;
+}
+
+.Congrats {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.822);
+    display: flex;
+    font-size: 2rem;
+    flex-direction: column;
+    color: aliceblue;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.Congrats h4 {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.Congrats div {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem 1.8rem;
+    background-color: blue;
+    border-radius: 2rem;
+    font-weight: 600;
+    font-size: large;
+    box-shadow: 0px 5px 10px black;
+    transition: all 0.3s ease-in-out;
+}
+
+.Congrats div:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    background-color: cadetblue;
+    box-shadow: 0px 7px 12px black;
+}
+
+@media screen and (max-width: 768px) {
+    .navBar {
+        /* padding: 0 2rem; */
+        padding: 0 3%;
+        /* background-color: red; */
+        background-color: rgb(49, 17, 67);
+    }
+
+    .navBar_logo {
+        font-size: 1rem;
+    }
+
+    .navSearchBar {
+        width: fit-content;
+        height: fit-content;
+        /* padding: 0.5rem 1rem; */
+    }
+
+    .navSearchBar input {
+        /* width: fit-content; */
+        height: 2.5rem;
+        /* padding-left: 1rem; */
+        width: 100px;
+        /* background-color: rebeccapurple; */
+    }
+
+    .navSearchBar input::placeholder {
+        color: lightgray;
+        font-size: small;
+        /* display: none; */
+    }
+
+    .navSearchBar label {
+        position: absolute;
+        right: 7px;
+        top: 5px;
+    }
+
+    .navSearchBar label img {
+        width: 30px;
+    }
+
+    .navBar_sideBtn {
+        width: fit-content;
+        height: fit-content;
+        padding: 0.5rem 1rem;
+    }
+
+    .login_btn {
+        width: fit-content;
+        height: fit-content;
+        padding: 00.5rem 0.8rem;
+        /* font-size: 0.8rem; */
+        font-size: small;
+        /* padding: 0.5rem 1.2rem; */
+    }
+}
+
+/* Language: css */
